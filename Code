@@ -7,7 +7,7 @@ int main()
     int guess = 1;
     int nguess = 1;
     int correct = rand() % 100 + 1;
-    cout << "Guess the number" << endl;
+    cout << "Guess a number between 1 and 100" << endl;
     cin >> guess;
     while(correct>guess) {
     cout << "Your guess is too low" << endl << endl;
