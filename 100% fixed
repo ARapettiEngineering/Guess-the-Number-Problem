@@ -33,3 +33,4 @@ int main()
 
     return 0;
 }
+//randomize the number does not work
