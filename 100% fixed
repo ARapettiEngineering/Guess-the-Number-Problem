@@ -10,14 +10,7 @@ int main()
     int correct = rand() % 100 + 1;
     cout << "Guess a number between 1 and 100" << endl;
     cin >> guess;
- 
- if (correct == guess) {
-        cout << "You are correct!" << endl;
-        cout << "The number of guesses was " << nguess;
-
-    }
- 
-   while (1==1){
+   while (guess != correct){
     while(correct>guess) {
     cout << "Your guess is too low" << endl << endl;
    cout << "Try Again" << endl;
@@ -32,7 +25,11 @@ int main()
         ++nguess;
     }
    }
-    
+    if (correct == guess) {
+        cout << "You are correct!" << endl;
+        cout << "The number of guesses was " << nguess;
+
+    }
 
     return 0;
 }
