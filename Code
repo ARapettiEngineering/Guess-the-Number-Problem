@@ -7,6 +7,7 @@ int main()
     int guess = 1;
     int nguess = 1;
     int correct = 27;
+//Displaying the guess a number prompt and taking the guess
     cout << "Guess a number between 1 and 100" << endl;
     cin >> guess;
    while (guess != correct)
@@ -38,4 +39,3 @@ int main()
 
     return 0;
 }
-
