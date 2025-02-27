@@ -1,12 +1,16 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 int main()
 {
+//randomizing number
+srand(time(0));
 //Defining the variables
     int guess = 1;
     int nguess = 1;
-    int correct = 27;
+    int correct = rand() % 101;
 //Displaying the guess a number prompt and taking the guess
     cout << "Guess a number between 1 and 100" << endl;
     cin >> guess;
