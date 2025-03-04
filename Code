@@ -20,12 +20,13 @@ srand(time(0));
 
    while (guess != correct)
         {
+        //if the guess is not an integer it will display to enter an integer
         if (cin.fail()){
             cin.clear();
             cin.ignore(10000, '\n');
             cout << "Please Enter An Integer" << endl;
             cin >> guess;
-            ++nguess;
+            ++nguess; //adds one to the guess total
         }
 
         //When the guess is less than correct it will display its too low and add one to the number of guesses and tell the user to try again.
