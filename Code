@@ -1,6 +1,9 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <cmath>
+#include<bits/stdc++.h>
+#include <limits>
 using namespace std;
 
 int main()
@@ -14,25 +17,39 @@ srand(time(0));
 //Displaying the guess a number prompt and taking the guess
     cout << "Guess a number between 1 and 100" << endl;
     cin >> guess;
+
    while (guess != correct)
         {
+        if (cin.fail()){
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cout << "Please Enter An Integer" << endl;
+            cin >> guess;
+            ++nguess;
+        }
+
         //When the guess is less than correct it will display its too low and add one to the number of guesses and tell the user to try again.
-        if (correct>guess) {
+        else if (correct>guess) {
 
             cout << "Your guess is too low" << endl << endl;
             cout << "Try Again" << endl;
+            cout << endl << "Your Guess Rounded To " << floor(guess) << endl;
             cin >> guess;
             ++nguess;
-        }
+            }
+
     //When the guess is greater than correct it will display its too high and add one to the number of guesses and tell the user to try again.
-        if (correct<guess) {
+        else if (correct<guess) {
 
             cout << "Your guess is too high" << endl << endl;
             cout << "Try Again" << endl;
+            cout << "Your Guess Rounded To " << floor(guess) << endl;
             cin >> guess;
             ++nguess;
         }
-   }
+        }
+
+
    //When the guess is correct it will display that it is correct then tell you the number of guesses.
     if (correct == guess) {
 
@@ -40,6 +57,7 @@ srand(time(0));
         cout << "The number of guesses was " << nguess;
 
     }
+
 
     return 0;
 }
