@@ -34,7 +34,7 @@ srand(time(0));
 
             cout << "Your guess is too low" << endl;
             cout << endl << "Your Guess Rounded To " << floor(guess) << endl;
-            cout << endl << "Try Again" << endl;
+            cout << endl << "Try Again" << endl << endl;
             cin >> guess;
             ++nguess;
             }
@@ -44,7 +44,7 @@ srand(time(0));
 
             cout << "Your guess is too high" << endl;
             cout << "Your Guess Rounded To " << floor(guess) << endl;
-            cout << endl <<"Try Again" << endl;
+            cout << endl <<"Try Again" << endl << endl;
             cin >> guess;
             ++nguess;
         }
