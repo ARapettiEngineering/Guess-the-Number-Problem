@@ -31,9 +31,9 @@ srand(time(0));
         //When the guess is less than correct it will display its too low and add one to the number of guesses and tell the user to try again.
         else if (correct>guess) {
 
-            cout << "Your guess is too low" << endl << endl;
-            cout << "Try Again" << endl;
+            cout << "Your guess is too low" << endl;
             cout << endl << "Your Guess Rounded To " << floor(guess) << endl;
+            cout << endl << "Try Again" << endl;
             cin >> guess;
             ++nguess;
             }
@@ -41,9 +41,9 @@ srand(time(0));
     //When the guess is greater than correct it will display its too high and add one to the number of guesses and tell the user to try again.
         else if (correct<guess) {
 
-            cout << "Your guess is too high" << endl << endl;
-            cout << "Try Again" << endl;
+            cout << "Your guess is too high" << endl;
             cout << "Your Guess Rounded To " << floor(guess) << endl;
+            cout << endl <<"Try Again" << endl;
             cin >> guess;
             ++nguess;
         }
